@@ -8,23 +8,23 @@ from typing import List, Set, Dict, Tuple, Optional
 # Return true if such a pair exists, otherwise return false.
 
 
-def SumOfTwo(a: List[int], b: List[int], v: int) -> bool:
-    """Brute Force Attempt at solving the SumOfTwo problem.
+# def SumOfTwo(a: List[int], b: List[int], v: int) -> bool:
+#     """Brute Force Attempt at solving the SumOfTwo problem.
 
-    :param a: The First Integer Array
-    :param b: The Second Integer Array
-    :param v: Target Value
-    :returns: A Boolean value of whether or not the two integer arrays can hit the target value
-    """
+#     :param a: The First Integer Array
+#     :param b: The Second Integer Array
+#     :param v: Target Value
+#     :returns: A Boolean value of whether or not the two integer arrays can hit the target value
+#     """
 
-    # Loop through all entries in a and b, and see if the sum is the target value
-    for int_a in a:
-        for int_b in b:
-            if int_a+int_b == v:
-                return True
+#     # Loop through all entries in a and b, and see if the sum is the target value
+#     for int_a in a:
+#         for int_b in b:
+#             if int_a+int_b == v:
+#                 return True
 
-    # If none of the sums is equal to the target value, return False
-    return False
+#     # If none of the sums is equal to the target value, return False
+#     return False
 
 
 def SumOfTwo(a: List[int], b: List[int], v: int) -> bool:
