@@ -74,7 +74,7 @@ def findLongestSubarrayBySum(arr: List[int], s: int) -> List[int]:
 def main():
     print(findLongestSubarrayBySum(
         arr=[5, 3, 5, 6, 7],
-        s=8)
+        s=13)
     )
 
 
