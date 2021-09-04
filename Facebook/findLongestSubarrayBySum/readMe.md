@@ -14,7 +14,7 @@ If there are no answers, return [-1].
 
 #### Inputs
 
-arr = [1, 2, 3, 7, 5]
+arr = [1, 2, 3, 7, 5] \
 s = 12
 
 #### Output
@@ -25,7 +25,7 @@ s = 12
 
 #### Inputs
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] \
 s = 15
 
 #### Output
@@ -36,7 +36,7 @@ s = 15
 
 #### Inputs
 
-arr = [5, 3, 5, 6, 7]
+arr = [5, 3, 5, 6, 7] \
 s = 4
 
 #### Output
@@ -60,7 +60,7 @@ from typing import List, Set, Dict, Tuple, Optional
 
 
 def findLongestSubarrayBySum(arr: List[int], s: int) -> List[int]:
-    """Brute Force Attempt at solving the SumOfTwo problem.
+    """Brute Force Attempt at solving the findLongestSubarrayBySum problem.
 
     :param arr: The unsorted array
     :param s: The Target Sum
