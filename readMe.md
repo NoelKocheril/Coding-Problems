@@ -19,3 +19,4 @@
 ## List of all Problems
 
 1. [Google - Sum of Two](https://github.com/NoelKocheril/Coding-Problems/tree/main/Google/SumOfTwo)
+2. [Facebook - Find Longest Sub-Array by Sum](https://github.com/NoelKocheril/Coding-Problems/tree/main/Facebook/findLongestSubarrayBySum)
