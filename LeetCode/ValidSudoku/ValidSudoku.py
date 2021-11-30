@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from typing import List
+from typing import List, Set
 
 """
 Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
@@ -13,6 +13,8 @@ Note:
     A Sudoku board (partially filled) could be valid but is not necessarily solvable.
     Only the filled cells need to be validated according to the mentioned rules.
 """
+
+# Solution #1
 
 
 def ValidSudoku(board: List[List[int]]) -> bool:
@@ -74,6 +76,45 @@ def ValidSudoku(board: List[List[int]]) -> bool:
                     else:
                         gridSet.add(board[x_pos][y_pos])
 
+    return True
+
+# Solution #2
+
+
+def ValidSudoku(board: List[List[int]]) -> bool:
+    """Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+    * Each row must contain the digits 1-9 without repetition.\n
+    * Each column must contain the digits 1-9 without repetition.\n
+    * Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+
+    :param board: A partially filled 9x9 2D List of ints
+    :returns: a boolean value of wheter or not, the board is valid
+    """
+
+    seen: Set[str] = set()
+
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            value = board[i][j]
+
+            if value == ".":
+                continue
+
+            row_entry = f"{value} found in row {i}"
+            col_entry = f"{value} found in col {j}"
+            box_entry = f"{value} found in sub box {i//3}-{j//3}"
+
+            # Check if Entry Already Exists in seen
+            if ((row_entry in seen) or (col_entry in seen) or (box_entry in seen)):
+                return False
+
+            # Add new entries into set
+            seen.add(row_entry)
+            seen.add(col_entry)
+            seen.add(box_entry)
+
+            # print(seen)
     return True
 
 
